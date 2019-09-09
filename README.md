@@ -1,14 +1,58 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+Millennial Data Dashboard
+In 2013, students of the Statistics class at FSEV UK were asked to invite their friends to participate in this survey.
+The dataset accrued over 1000 participants and captured the fears, hobbies, and habits of a generation of young people.
+The original questionnaire was in Slovak language and was later translated into English.
+All participants were of Slovakian nationality, aged between 15-30.
 
+UX
+This project was designed for anyone with an interest in the psychology of young people.
+To achieve this, most data is displayed graphically, to better illustrate the findings of the survey.
 
-Hi there! Welcome to AWS Cloud9!
+>--- User Story 1 ---<
+As a user type, I want to perform an action, so that I can achieve a goal.
+>--- User Story 2 ---<
+>--- User Story 3 ---<
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+>--- Insert Wireframes Here ---<
 
-Happy coding!
+Existing Features
+navbar
+static demographics side bar
+interactive infographics for music interests
+
+Features Left to Implement
+landing page - about/ demographics
+movie page with interactive charts
+interests page with interactive charts
+fears page with interactive charts
+health page with interactive charts
+correlation-checker
+
+Technologies Used
+HTML
+CSS
+JavaScript
+Bootstrap
+D3
+Crossfilter
+DC
+
+Testing
+Testing has not been carried out on this project yet
+
+Contact form:
+Go to the "Contact Us" page
+Try to submit the empty form and verify that an error message about the required fields appears
+Try to submit the form with an invalid email address and verify that a relevant error message appears
+Try to submit the form with all inputs valid and verify that a success message appears.
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+Deployment
+This project is not yet deployed.
+
+Credits
+Miroslav Sabo, owner of the Young People Survey Data.

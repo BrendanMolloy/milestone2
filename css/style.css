@@ -1,0 +1,13 @@
+.section {
+	text-align: center;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 30px;
+}
+
+.row {
+	text-align: center;
+}
+
+.navbar-container {
+	width: 100vw;
+}
