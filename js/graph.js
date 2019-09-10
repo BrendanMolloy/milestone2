@@ -49,6 +49,11 @@ function remove_empty_bins(source_group) { //eliminates empty or null values fro
     };
 }
 
+/* function scale_graphs(){
+    var w = parent(width);
+    var h = w;
+} */
+
 //---------------------- Demographics Graphs ---------------------------------//
 
 function show_gender_balance(ndx){
@@ -57,8 +62,8 @@ function show_gender_balance(ndx){
     var filtered_group = remove_empty_bins(group)
     
     dc.pieChart("#gender-balance")
-        .width(400)
-        .height(300)
+        .height(200)
+        .width(300)
         .externalRadiusPadding(20)
         .innerRadius(0)
         .dimension(dim)
@@ -77,8 +82,8 @@ function show_age_range(ndx){
     var filtered_group = remove_empty_bins(group)
     
     dc.barChart("#age")
-        .width(400)
-        .height(300)
+        .width(300)
+        .height(200)
         .margins({top:10, right:50, bottom:30, left:50})
         .dimension(dim)
         .group(filtered_group)
@@ -96,8 +101,8 @@ function show_handedness(ndx){
     var filtered_group = remove_empty_bins(group)
     
     dc.pieChart("#handedness")
-        .width(400)
-        .height(300)
+        .width(300)
+        .height(200)
         .externalRadiusPadding(20)
         .innerRadius(0)
         .dimension(dim)
@@ -116,8 +121,8 @@ function show_city_village(ndx){
     var filtered_group = remove_empty_bins(group)
     
     dc.pieChart("#city-village")
-        .width(400)
-        .height(300)
+        .width(300)
+        .height(200)
         .externalRadiusPadding(20)
         .innerRadius(0)
         .dimension(dim)
