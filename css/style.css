@@ -16,23 +16,34 @@
 }
 
 .sidenav {
-  /*height: 100%;  Full-height: remove this if you want "auto" height */
-  width: 450px; /* Set the width of the sidebar */
+  height: 100%;  /*Full-height: remove this if you want "auto" height */
+  /*width: 450px;  Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #D3D3D3; /* Light Grey */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 70px;
+  padding:0;
+  padding-top: 60px;
 }
 
 .main {
-  margin-left: 450px;  Same as the width of the sidebar */
+  margin-left: 300px;  /*Same as the width of the sidebar */
   padding: 0;
   padding-top: 60px;
 }
 
 #music-enjoyment {
   padding: 0;
+}
+
+.side-graphs {
+  text-align:center;
+  width:100%;
+  padding: 20px;
+}
+
+.side-graphs#age{
+  padding:0;
 }
