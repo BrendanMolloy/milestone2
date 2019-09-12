@@ -51,6 +51,7 @@ function show_pie_chart(ndx, dimensionLabel, id){
         .dimension(dim)
         .group(filtered_group)
         .legend(dc.legend())
+        .xAxis().tickFormat(d3.format('.0f'))
         .on('pretransition', function(chart) {
         chart.selectAll('text.pie-slice').text(function(d) {
             return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
