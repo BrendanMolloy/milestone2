@@ -1,53 +1,73 @@
 .section {
-	text-align: center;
-	border-bottom: 1px solid #e6e6e6;
-	padding: 0px;
+  text-align: center;
+  padding: 0px;
+}
+
+p{
+  border-top: 1px solid #e6e6e6 ;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .row {
-	text-align: center;
+  text-align: center;
 }
 
 .navbar {
-	width: 100vw;
-	position: fixed;
-	z-index: 2;
-	padding: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  padding: 0;
+  border-bottom: 1px solid #000;
 }
 
 
 .landing {
   text-align: center;
   padding-top: 60px;
-  padding-right:15%;
+  padding-right: 15%;
   padding-left: 15%;
 }
 
 .landing-graphs {
-  position: relative; 
- height: 0; 
- width: 100%; 
- padding: 50px;
- padding-bottom: 25%; 
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 50px;
+  padding-bottom: 25%;
 }
 
 .sidenav {
-  height: 100%;  /*Full-height: remove this if you want "auto" height */
+  height: 100%;
+  /*Full-height: remove this if you want "auto" height */
   /*width: 450px;  Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
   left: 0;
-  background-color: #D3D3D3; /* Light Grey */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding:0;
+  background-color: #CCCCCC;
+  /* Light Grey */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding: 0;
   padding-top: 60px;
+  border-right: 1px solid #000;
 }
 
 .main {
-  margin-left: 300px;  /*Same as the width of the sidebar */
-  padding: 0;
+  margin-left: 250px;
+  /*Same as the width of the sidebar */
+  max-width: 100vw;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 60px;
+}
+
+.badge {
+  background-color: #E7F2FD;
+  border: 5px solid #fff;;
 }
 
 
@@ -56,11 +76,11 @@
 }
 
 .side-graphs {
-  text-align:center;
-  width:100%;
+  text-align: center;
+  width: 100%;
   padding: 20px;
 }
 
-.side-graphs#age{
-  padding:0;
+.side-graphs#age {
+  padding: 0;
 }
