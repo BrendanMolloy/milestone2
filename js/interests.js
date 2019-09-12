@@ -49,6 +49,8 @@ function makeGraphs(error, ypData){
     show_bar_chart(ndx, 'Adrenaline sports', "#sport-extreme", "Sport (extreme)"); 
     show_bar_chart(ndx, 'Theatre', "#theatre", "Theatre"); */
     
+    dc.utils.printSingleValue.fformat = d3.format('.0f');
+    
     dc.renderAll();
 }
 

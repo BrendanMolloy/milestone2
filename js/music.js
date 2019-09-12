@@ -35,6 +35,8 @@ function makeGraphs(error, ypData){
     show_bar_chart(ndx, 'Rock', "#rock", "Rock");
     show_bar_chart(ndx, 'Techno, Trance', "#techno", "Techno"); 
     
+    dc.utils.printSingleValue.fformat = d3.format('.0f');
+    
     dc.renderAll();
 }
 

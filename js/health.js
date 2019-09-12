@@ -21,6 +21,8 @@ function makeGraphs(error, ypData){
     show_bar_chart(ndx, 'Alcohol', "#drinking", "Drinking Habits"); 
     show_bar_chart(ndx, 'Smoking', "#smoking", "Smoking Habits");
     
+    dc.utils.printSingleValue.fformat = d3.format('.0f');
+    
     dc.renderAll();
 }
 

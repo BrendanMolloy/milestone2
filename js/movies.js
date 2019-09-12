@@ -30,6 +30,8 @@ function makeGraphs(error, ypData){
     show_bar_chart(ndx, 'War', "#war", "War");
     show_bar_chart(ndx, 'Western', "#western", "Western");
     
+    dc.utils.printSingleValue.fformat = d3.format('.0f');
+    
     dc.renderAll();
 }
 
