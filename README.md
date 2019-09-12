@@ -8,9 +8,9 @@ UX
 This project was designed for anyone with an interest in the psychology of young people.
 To achieve this, most data is displayed graphically, to better illustrate the findings of the survey.
 
->--- User Story 1 ---<
 As a user type, I want to perform an action, so that I can achieve a goal.
->--- User Story 2 ---<
+As a music producer, I want to learn more about young people's music interest, to better cater to their tastes.
+As a movie studio, I want to learn more about young people's viewing habits, so I can generate more content that will appeal to them.
 >--- User Story 3 ---<
 
 >--- Insert Wireframes Here ---<

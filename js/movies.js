@@ -16,38 +16,19 @@ function makeGraphs(error, ypData){
     show_pie_chart(ndx, 'Village - town', "#city-village");
     show_pie_chart(ndx, 'Left - right handed', "#handedness")
     
-    // music //
-    /*show_music_enjoyment(ndx);*/
-    show_bar_chart(ndx, 'Alternative', "#alternative", "Alternative");
-    show_bar_chart(ndx, 'Classical music', "#classical", "Classical");
-    show_bar_chart(ndx, 'Country', "#country", "Country");
-    show_bar_chart(ndx, 'Dance', "#dance", "Dance");
-    show_bar_chart(ndx, 'Folk', "#folk", "Folk");
-    show_bar_chart(ndx, 'Hiphop, Rap', "#hiphop", "Hip hop");
-    show_bar_chart(ndx, 'Swing, Jazz', "#jazz", "Jazz");
-    show_bar_chart(ndx, 'Latino', "#latin", "Latin");
-    show_bar_chart(ndx, 'Metal or Hardrock', "#metal", "Metal");
-    show_bar_chart(ndx, 'Musical', "#musicals", "Musicals");
-    show_bar_chart(ndx, 'Opera', "#opera", "Opera");
-    show_bar_chart(ndx, 'Pop', "#pop", "Pop");
-    show_bar_chart(ndx, 'Punk', "#punk", "Punk");
-    show_bar_chart(ndx, 'Reggae, Ska', "#reggae", "Reggae");
-    show_bar_chart(ndx, 'Rock', "#rock", "Rock");
-    show_bar_chart(ndx, 'Techno, Trance', "#techno", "Techno"); 
-    
-    // music //
-    /*show_movie_enjoyment(ndx);
-    show_action(ndx);
-    show_cartoon(ndx);
-    show_comedy(ndx);
-    show_documentary(ndx);
-    show_fantasy(ndx);
-    show_horror(ndx);
-    show_romatic(ndx);
-    show_scifi(ndx);
-    show_thriller(ndx);
-    show_war(ndx);
-    show_western(ndx); */
+    // movies //
+    //show_enjoyment(ndx, 'Movies', "#movie-enjoyment", "I enjoy watching Movies"); 
+    show_bar_chart(ndx, 'Action', "#action", "Action");
+    show_bar_chart(ndx, 'Animated', "#animated", "Animated"); 
+    show_bar_chart(ndx, 'Comedy', "#comedy", "Comedy");
+    show_bar_chart(ndx, 'Documentary', "#documentary", "Documentary");
+    show_bar_chart(ndx, 'Fantasy/Fairy tales', "#fantasy", "Fantasy");
+    show_bar_chart(ndx, 'Horror', "#horror", "Horror");
+    show_bar_chart(ndx, 'Romantic', "#romantic", "Romantic");
+    show_bar_chart(ndx, 'Sci-fi', "#scifi", "Sci-Fi");
+    show_bar_chart(ndx, 'Thriller', "#thriller", "Thriller");
+    show_bar_chart(ndx, 'War', "#war", "War");
+    show_bar_chart(ndx, 'Western', "#western", "Western");
     
     dc.renderAll();
 }
@@ -122,14 +103,14 @@ function show_age_range(ndx){
     })
 } */
 
-//---------------------------- Music Graphs ----------------------------------//
+//---------------------------- Main Graphs ----------------------------------//
 
-function show_music_enjoyment(ndx){
-    var dim = ndx.dimension(dc.pluck('Music'));
+function show_enjoyment(ndx, dimensionLabel, id, xlabel){
+    var dim = ndx.dimension(dc.pluck(dimensionLabel));
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
     
-    dc.barChart("#music-enjoyment")
+    dc.barChart(id)
         .width(400)
         .height(300)
         .margins({top:10, right:50, bottom:30, left:50})
@@ -139,7 +120,7 @@ function show_music_enjoyment(ndx){
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .elasticY(true)
-        .xAxisLabel("I enjoy listening to music")
+        .xAxisLabel(xlabel)
         .yAxis().ticks(10);
 }
 
