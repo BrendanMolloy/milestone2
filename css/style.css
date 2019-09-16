@@ -8,6 +8,15 @@ p{
   border-bottom: 1px solid #e6e6e6;
 }
 
+.landing p {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+
 .row {
   text-align: center;
 }
@@ -26,6 +35,10 @@ p{
   padding-top: 60px;
   padding-right: 15%;
   padding-left: 15%;
+  background: url("../images/young-people.jpg") no-repeat fixed center;
+  height: 100vh;
+  background-size: cover;
+  position:center;
 }
 
 .landing-graphs {
@@ -34,6 +47,8 @@ p{
   width: 100%;
   padding: 50px;
   padding-bottom: 25%;
+  background: rgba(231, 242, 253, 0.9); 
+ /* opacity: 0.9; */
 }
 
 .sidenav {
@@ -67,7 +82,7 @@ p{
 
 .badge {
   background-color: #E7F2FD;
-  border: 5px solid #fff;;
+  border: 5px solid #fff;
 }
 
 
