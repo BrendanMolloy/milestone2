@@ -135,12 +135,13 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel){
     var dim = ndx.dimension(dc.pluck(dimensionLabel)); //selects column from dataset
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
-    var w = 360; //adjust graph dimensions
-    var h = 270;
+    /*var w = 240; //adjust graph dimensions
+    var h = 180; */
     
     dc.barChart(id)
-        .width(w)
-        .height(h)
+        /*.width(w)
+        .height(h) */
+        .useViewBoxResizing(true)
         .margins({top:10, right:50, bottom:30, left:50})
         .dimension(dim)
         .group(filtered_group)
@@ -149,5 +150,5 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel){
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel(xlabel)
-        .yAxis().ticks(10);
+        .yAxis().ticks(5);
 }

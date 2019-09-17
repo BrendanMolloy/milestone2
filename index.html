@@ -23,43 +23,43 @@
 <body>
     <!------------------------------- Navbar -------------------------------------->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Young People</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-expand-m navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Young People</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="music.html">Music</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="movies.html">Movies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="interests.html">Interests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fears.html">Fears</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="health.html">Health</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="interests.html">Interests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fears.html">Fears</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="health.html">Health</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <!-- music -->
     <section class="landing">
         <h1>Young People</h1>
-        <p>Welcome to the Young People data dashboard. <br>
-        All the graphs on this site are interactable and help to illustrate the relationships across the idfferent categories.<br>
-        On this page you can see the four main demographic filters, of "Age", "Gender", whether they live in a city or village, or whether they are left or right-handed. <br>
-        Try clicking one now to see how many female, left-handed people are represented, or how many people of the age of 18 live in a city. <br>
-        Click on any of the sections in the navbar to learn more about this generation of young people.</p>
+        <p>Welcome to the Young People data dashboard. <br> All the graphs on this site are interactable and help to illustrate the relationships across the idfferent categories.<br> On this page you can see the four main demographic filters, of "Age", "Gender",
+            whether they live in a city or village, or whether they are left or right-handed. <br> Try clicking one now to see how many female, left-handed people are represented, or how many people of the age of 18 live in a city. <br> Click on any of
+            the sections in the navbar to learn more about this generation of young people.</p>
         <div class="row">
             <div id="music-enjoyment" class="col-sm-12 col-m-12 col-lg-12"></div>
         </div>
@@ -70,6 +70,10 @@
             <div id="handedness" class="landing-graphs col-sm-12 col-m-6 col-lg-6"></div>
         </div>
     </section>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 

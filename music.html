@@ -23,71 +23,80 @@
 <body>
   <!------------------------------- Navbar -------------------------------------->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Young People</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Young People</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="music.html">Music <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="movies.html">Movies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="interests.html">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="fears.html">Fears</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="health.html">Health</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="music.html">Music <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="interests.html">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fears.html">Fears</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="health.html">Health</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <!------------------------------- Sidebar ------------------------------------->
   <!--  filters/demographics -->
-  <div class="row">
-    <div class="sidenav col-sm-6 col-m-6 col-lg-2">
-      <div id="age" class="side-graphs"></div>
-      <div id="gender-balance" class="side-graphs"></div>
-      <div id="city-village" class="side-graphs"></div>
-      <div id="handedness" class="side-graphs"></div>
-    </div>
+  <div class="container">
+    <div class="row">
+      <div class="sidenav col-xs-5 col-sm-5 col-m-5 col-lg-2">
+        <div id="age" class="side-graphs"></div>
+        <div id="gender-balance" class="side-graphs"></div>
+        <div id="city-village" class="side-graphs"></div>
+        <div id="handedness" class="side-graphs"></div>
+      </div>
 
-  <!-------------------------------- Music ------------------------------------->
-    <div class="section main col-lg-10">
-      <h1>Music Preferences</h1>
-      <p>This page shows how young people rate different genres of music on a scale of 1 - 5, where 1 is "Don't enjoy at all", and 5 is "Enjoy very much". 
-      <br> By exploring this data, you can see that certain genres of music tend to receive similar ratings.
-      <br> You can also see a difference between genders and their music preferences.</p>
-      <div class="row">
-        <div id="alternative" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="classical" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="country" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="dance" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="folk" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="hiphop" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="jazz" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="latin" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="metal" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="musicals" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="opera" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="pop" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="punk" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="reggae" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="rock" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-        <div id="techno" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+      <!-------------------------------- Music ------------------------------------->
+      <div class="main col-xs-7 col-sm-7 col-m-7 col-lg-10">
+        <h1>Music Preferences</h1>
+        <p>This page shows how young people rate different genres of music on a scale of 1 - 5, where 1 is "Don't enjoy at all", and 5 is "Enjoy very much".
+          <br> By exploring this data, you can see that certain genres of music tend to receive similar ratings.
+          <br> You can also see a difference between genders and their music preferences.</p>
+        <div class="row">
+          <div id="alternative" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="classical" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="country" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="dance" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="folk" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="hiphop" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="jazz" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="latin" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="metal" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="musicals" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="opera" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="pop" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="punk" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="reggae" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="rock" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+          <div id="techno" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+        </div>
       </div>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 </body>
 

@@ -1,32 +1,28 @@
-.section {
-  text-align: center;
-  padding: 0px;
+.container {
+  margin: 0;
+  padding: 0;
 }
-
-p{
-  border-top: 1px solid #e6e6e6 ;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.landing p {
-    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-}
-
 
 .row {
   text-align: center;
+  max-width: 100vw;
+  margin: 0;
+}
+
+.navbar-container {
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  border-bottom: 1px solid #000;
+
 }
 
 .navbar {
-  width: 100vw;
-  position: fixed;
   z-index: 2;
   padding: 0;
-  border-bottom: 1px solid #000;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0;
 }
 
 
@@ -38,17 +34,33 @@ p{
   background: url("../images/young-people.jpg") no-repeat fixed center;
   height: 100vh;
   background-size: cover;
-  position:center;
 }
 
 .landing-graphs {
   position: relative;
   height: 0;
   width: 100%;
-  padding: 50px;
+  padding: 5%;
   padding-bottom: 25%;
-  background: rgba(231, 242, 253, 0.9); 
- /* opacity: 0.9; */
+  background: rgba(231, 242, 253, 0.9);
+}
+
+p {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.landing p {
+  background: rgba(231, 242, 253, 0.7);
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3s;
+  /* Internet Explorer */
+  -o-animation: fadein 3s;
+  /* Opera < 12.1 */
+  animation: fadein 3s;
 }
 
 .sidenav {
@@ -72,15 +84,19 @@ p{
 }
 
 .main {
-  margin-left: 250px;
-  /*Same as the width of the sidebar */
+  /*margin-left: 250px;
+  Same as the width of the sidebar */
+  text-align: center;
   max-width: 100vw;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 60px;
 }
 
 .badge {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
   background-color: #E7F2FD;
   border: 5px solid #fff;
 }
@@ -93,7 +109,8 @@ p{
 .side-graphs {
   text-align: center;
   width: 100%;
-  padding: 20px;
+  padding: 5%;
+  padding-right: 0px;
 }
 
 .side-graphs#age {
