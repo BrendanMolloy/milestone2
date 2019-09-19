@@ -83,13 +83,25 @@ p {
   border-right: 1px solid #000;
 }
 
+.dropdowns {
+  padding-top: 80px;
+  display: inline-block;	
+	float: none;
+	margin: 0;
+}
+
+#gender-filter{
+  height:20px;
+}
+	
+
 .main {
   /*margin-left: 250px;
   Same as the width of the sidebar */
   text-align: center;
   max-width: 100vw;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 60px;
 }
 

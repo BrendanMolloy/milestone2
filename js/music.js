@@ -11,10 +11,10 @@ function makeGraphs(error, ypData){
     var ndx = crossfilter(ypData);
     
     // demographics // 
-    show_age_range(ndx); 
-    show_pie_chart(ndx, 'Gender', "#gender-balance");
-    show_pie_chart(ndx, 'Village - town', "#city-village");
-    show_pie_chart(ndx, 'Left - right handed', "#handedness")
+    show_dropdown(ndx, 'Age', "#age-filter"); 
+    show_dropdown(ndx, 'Gender', "#gender-filter");
+    show_dropdown(ndx, 'Village - town', "#city-village-filter");
+    show_dropdown(ndx, 'Left - right handed', "#handedness-filter")
     
     // music //
     /*show_enjoyment(ndx, 'Music', "#music-enjoyment", "I enjoy listening to music");*/
@@ -91,24 +91,14 @@ function show_age_range(ndx){
         .yAxis().ticks(10);
 } 
 
-/*function show_age_range(ndx){ //displays age distribution in pie chart form
-    var dim = ndx.dimension(dc.pluck('Age'));
+function show_dropdown(ndx, dimensionLabel, id) {
+    var dim = ndx.dimension(dc.pluck(dimensionLabel));
     var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
     
-    dc.pieChart("#age")
-        .useViewBoxResizing(true)
-        .externalRadiusPadding(10)
-        .innerRadius(0)
+    dc.selectMenu(id)
         .dimension(dim)
-        .group(filtered_group)
-        .legend(dc.legend())
-        .on('pretransition', function(chart) {
-        chart.selectAll('text.pie-slice').text(function(d) {
-            return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-        })
-    })
-} */
+        .group(group);
+}
 
 //---------------------------- Main Graphs ----------------------------------//
 
