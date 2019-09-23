@@ -84,14 +84,11 @@ p {
 }
 
 .dropdowns {
-  padding-top: 80px;
-  display: inline-block;	
-	float: none;
+  text-align: center;
+  padding: 20px;
+  /*display: inline-block;	
+	float: none;*/
 	margin: 0;
-}
-
-#gender-filter{
-  height:20px;
 }
 	
 
