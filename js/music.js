@@ -15,11 +15,9 @@ function makeGraphs(error, ypData) {
     show_dropdown(ndx, 'Gender', "#gender-filter");
     show_dropdown(ndx, 'Village - town', "#city-village-filter");
     show_dropdown(ndx, 'Left - right handed', "#handedness-filter");
-    
-    show_stacked_chart(ndx);
 
     // music //
-    /*show_bar_chart(ndx, 'Alternative', "#alternative", "Alternative");
+    show_bar_chart(ndx, 'Alternative', "#alternative", "Alternative");
     show_bar_chart(ndx, 'Classical music', "#classical", "Classical");
     show_bar_chart(ndx, 'Country', "#country", "Country");
     show_bar_chart(ndx, 'Dance', "#dance", "Dance");
@@ -36,7 +34,7 @@ function makeGraphs(error, ypData) {
     show_bar_chart(ndx, 'Rock', "#rock", "Rock");
     show_bar_chart(ndx, 'Techno, Trance', "#techno", "Techno");
 
-    dc.utils.printSingleValue.fformat = d3.format('.0f'); */
+    dc.utils.printSingleValue.fformat = d3.format('.0f'); 
 
     dc.renderAll();
 }
@@ -124,60 +122,5 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
         .elasticY(true)
         .xAxisLabel(xlabel)
         .yAxis().ticks(5);
-}
-
-function show_stacked_chart(ndx) {
-    
-    function MusicByScore(dimension, score) {
-        return dim.group().reduce(
-            function (p, v) {
-                p.total++;
-                if(v.score == score) {
-                    p.match++;
-                }
-                return p;
-            },
-            function (p, v) {
-                p.total--;
-                if(v.score == score) {
-                    p.match--;
-                }
-                return p;
-            },
-            function () {
-                return {total: 0, match: 0};
-            }
-        );
-    }
-    
-    var dim = ndx.dimension(dc.pluck('Alternative'));
-    var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
-    var scored1 = MusicByScore(dim, "1");
-    var scored2 = MusicByScore(dim, "2");
-    var scored3 = MusicByScore(dim, "3");
-    var scored4 = MusicByScore(dim, "4");
-    var scored5 = MusicByScore(dim, "5");
-
-    dc.barChart("#test")
-        .width(600)
-        .height(300)
-        .dimension(dim)
-        .group(filtered_group, "1")
-        .stack(filtered_group, "2")
-        .stack(filtered_group, "3")
-        .stack(filtered_group, "4")
-        .stack(filtered_group, "5")
-        .valueAccessor(function(d) {
-            if(d.value.total > 0) {
-                return (d.value.match / d.value.total) * 100;
-            } else {
-                return 0;
-            }
-        })
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(520).y(20).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 30, left: 30});
 }
 

@@ -72,22 +72,3 @@ function show_age_range(ndx){
         .yAxis().ticks(10);
 } 
 
-/*function show_age_range(ndx){ //displays age distribution in pie chart form
-    var dim = ndx.dimension(dc.pluck('Age'));
-    var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
-    
-    dc.pieChart("#age")
-        .useViewBoxResizing(true)
-        .externalRadiusPadding(10)
-        .innerRadius(0)
-        .dimension(dim)
-        .group(filtered_group)
-        .legend(dc.legend())
-        .on('pretransition', function(chart) {
-        chart.selectAll('text.pie-slice').text(function(d) {
-            return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-        })
-    })
-} */
-

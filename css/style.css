@@ -3,11 +3,11 @@
   padding: 0;
 }
 
-.row {
+/*.row {
   text-align: center;
   max-width: 100vw;
   margin: 0;
-}
+} */
 
 .navbar-container {
   z-index: 2;
@@ -19,7 +19,8 @@
 
 .navbar {
   z-index: 2;
-  padding: 0;
+  position: fixed;
+  width: 100vw;
   padding-left: 5%;
   padding-right: 5%;
   margin: 0;
@@ -32,16 +33,18 @@
   padding-right: 15%;
   padding-left: 15%;
   background: url("../images/young-people.jpg") no-repeat fixed center;
-  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: auto;
   background-size: cover;
+  background-position:absolute;
 }
 
 .landing-graphs {
-  position: relative;
-  height: 0;
+  position: relative; 
   width: 100%;
   padding: 5%;
-  padding-bottom: 25%;
   background: rgba(231, 242, 253, 0.9);
 }
 
@@ -85,10 +88,14 @@ p {
 
 .dropdowns {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
   /*display: inline-block;	
 	float: none;*/
 	margin: 0;
+}
+
+.dropdown-container{
+  max-width: inherit;
 }
 	
 
@@ -105,6 +112,7 @@ p {
 .badge {
   text-align: center;
   width: 100%;
+  height: auto;
   padding: 20px;
   background-color: #E7F2FD;
   border: 5px solid #fff;
