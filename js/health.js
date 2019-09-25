@@ -57,8 +57,8 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel){
     var filtered_group = remove_empty_bins(group)
     
     dc.barChart(id)
-        .width(400)
-        .height(300)
+        /*.width(400)
+        .height(300) */
         .margins({top:10, right:50, bottom:30, left:50})
         .dimension(dim)
         .group(filtered_group)
@@ -67,5 +67,5 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel){
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel(xlabel)
-        .yAxis().ticks(10);
+        .yAxis().ticks(5);
 }

@@ -83,12 +83,12 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
     var dim = ndx.dimension(dc.pluck(dimensionLabel)); //selects column from dataset
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
-    var w = 400; //adjust graph dimensions
-    var h = 300;
+    /*var w = 400; //adjust graph dimensions
+    var h = 300; */
 
     dc.barChart(id)
-        .width(w)
-        .height(h)
+        /*.width(w)
+        .height(h) */
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .dimension(dim)
         .group(filtered_group)
