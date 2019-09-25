@@ -23,7 +23,7 @@
 <body>
   <!------------------------------- Navbar -------------------------------------->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Young People</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -51,26 +51,26 @@
       </ul>
     </div>
   </nav>
-
-  <!------------------------------- Sidebar ------------------------------------->
-  <!--  filters/demographics -->
-  <div class="sidenav col-lg-2">
-    <div id="age" class="side-graphs"></div>
-    <div id="gender-balance" class="side-graphs"></div>
-    <div id="city-village" class="side-graphs"></div>
-    <div id="handedness" class="side-graphs"></div>
-  </div>
-
-
-  <!-- music -->
+  
+<!-------------------------------- Health ------------------------------------->
   <section class="section main">
     <h1>Health</h1>
-    <p>This page shows some indicators about the health-related habits of young people. <br> The "I live a very healthy lifestyle" graph shows on a scale of 1-5 how much each person agrees with the statement, where 1 is "Strongly disagree", and 5 is "Strongly
-      Agree". <br> Do you agree with how healthy they rate themselves, based on their smoking and drinking habits below?</p>
+    <p>This page shows some indicators about the health-related habits of young people.
+      <br> The "I live a very healthy lifestyle" graph shows on a scale of 1-5 how much each person agrees with the statement,
+      <br>where 1 is "Strongly disagree", and 5 is "Strongly Agree".
+      <br> Do you agree with how healthy they rate themselves, based on their smoking and drinking habits below?</p>
+    <div class="container-fluid dropdown-container">
+      <div class="row">
+        <div id="age-filter" class="dropdowns col-xs-6 col-md-6 col-lg-3">Age:<br></div>
+        <div id="gender-filter" class="dropdowns col-xs-6 col-md-6 col-lg-3">Gender:<br></div>
+        <div id="city-village-filter" class=" dropdowns col-xs-6 col-md-6 col-lg-3">City/Village:<br></div>
+        <div id="handedness-filter" class="dropdowns col-xs-6 col-md-6 col-lg-3">Handedness:<br></div>
+      </div>
+    </div>
     <div class="row">
-      <div id="healthy" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-      <div id="drinking" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
-      <div id="smoking" class="col-sm-12 col-m-6 col-lg-6 badge"></div>
+      <div id="healthy" class="col-sm-12 col-md-4 col-lg-4 badge"></div>
+      <div id="drinking" class="col-sm-12 col-md-4 col-lg-4 badge"></div>
+      <div id="smoking" class="col-sm-12 col-md-4 col-lg-4 badge"></div>
     </div>
   </section>
 

@@ -64,42 +64,6 @@ function show_dropdown(ndx, dimensionLabel, id) {
         .group(filtered_group);
 }
 
-function show_pie_chart(ndx, dimensionLabel, id) {
-    var dim = ndx.dimension(dc.pluck(dimensionLabel));
-    var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
-
-    dc.pieChart(id)
-        .useViewBoxResizing(true)
-        .externalRadiusPadding(10)
-        .innerRadius(0)
-        .dimension(dim)
-        .group(filtered_group)
-        .legend(dc.legend())
-        .on('pretransition', function(chart) {
-            chart.selectAll('text.pie-slice').text(function(d) {
-                return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
-            })
-        })
-}
-
-function show_age_range(ndx) {
-    var dim = ndx.dimension(dc.pluck('Age'));
-    var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
-
-    dc.barChart("#age")
-        .useViewBoxResizing(true)
-        .dimension(dim)
-        .group(filtered_group)
-        .transitionDuration(500)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .elasticY(true)
-        .xAxisLabel("Age")
-        .yAxis().ticks(10);
-}
-
 //---------------------------- Main Graphs ----------------------------------//
 
 function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
