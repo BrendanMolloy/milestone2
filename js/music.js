@@ -70,12 +70,8 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
     var dim = ndx.dimension(dc.pluck(dimensionLabel)); //selects column from dataset
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
-    /*var w = 240; //adjust graph dimensions
-    var h = 180; */
 
-    dc.barChart(id)
-        /*.width(w)
-        .height(h) */
+    dc.barChart(id) //finds the id of the div the graph will attach to
         .useViewBoxResizing(true)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .dimension(dim)

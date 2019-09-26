@@ -28,8 +28,6 @@ function makeGraphs(error, ypData){
     show_bar_chart(ndx, 'Snakes', "#snakes", "Snakes");
     show_bar_chart(ndx, 'Spiders', "#spiders", "Spiders");
     
-    dc.utils.printSingleValue.fformat = d3.format('.0f');
-    
     dc.renderAll();
 }
 
@@ -63,9 +61,7 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel){
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
     
-    dc.barChart(id)
-        /*.width(400)
-        .height(300) */
+    dc.barChart(id) //finds the id of the div the graph will attach to
         .margins({top:10, right:50, bottom:30, left:50})
         .dimension(dim)
         .group(filtered_group)

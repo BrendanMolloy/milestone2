@@ -1,3 +1,11 @@
+body{
+  font-family: 'Mansalva', cursive;
+}
+
+h1 {
+  font-family: 'Mansalva', cursive;
+}
+
 .container {
   margin: 0;
   padding: 0;
@@ -8,7 +16,6 @@
   position: fixed;
   width: 100vw;
   border-bottom: 1px solid #000;
-
 }
 
 .navbar {
@@ -21,11 +28,6 @@
   border-bottom: 2px solid #000;
 }
 
-.landing-container{
-  width:100vw;
-  height:100vh;
-}
-
 .landing {
   text-align: center;
   padding-top: 60px;
@@ -36,7 +38,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position:absolute;
 }
 
 .landing-graphs {
@@ -64,26 +65,6 @@ p {
   background: rgba(231, 242, 253, 0.7);
 }
 
-.sidenav {
-  height: 100%;
-  /*Full-height: remove this if you want "auto" height */
-  /*width: 450px;  Set the width of the sidebar */
-  position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1;
-  /* Stay on top */
-  top: 0;
-  /* Stay at the top */
-  left: 0;
-  background-color: #CCCCCC;
-  /* Light Grey */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding: 0;
-  padding-top: 60px;
-  border-right: 1px solid #000;
-}
-
 .dropdowns {
   text-align: center;
   max-width:250px;
@@ -94,10 +75,7 @@ p {
   text-align: center;
 }
 	
-
 .main {
-  /*margin-left: 250px;
-  Same as the width of the sidebar */
   text-align: center;
   max-width: 100vw;
   padding-left: 10%;
@@ -108,23 +86,6 @@ p {
 .badge {
   text-align: center;
   width: 100%;
-  /*height: auto; */
   background-color: #E7F2FD;
   border: 10px solid #fff;
-}
-
-
-#music-enjoyment {
-  padding: 0;
-}
-
-.side-graphs {
-  text-align: center;
-  width: 100%;
-  padding: 5%;
-  padding-right: 0px;
-}
-
-.side-graphs#age {
-  padding: 0;
 }

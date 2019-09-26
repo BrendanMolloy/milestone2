@@ -17,7 +17,6 @@ function makeGraphs(error, ypData) {
     show_dropdown(ndx, 'Left - right handed', "#handedness-filter");
 
     // movies //
-    //show_enjoyment(ndx, 'Movies', "#movie-enjoyment", "I enjoy watching Movies"); 
     show_bar_chart(ndx, 'Action', "#action", "Action");
     show_bar_chart(ndx, 'Animated', "#animated", "Animated");
     show_bar_chart(ndx, 'Comedy', "#comedy", "Comedy");
@@ -29,8 +28,6 @@ function makeGraphs(error, ypData) {
     show_bar_chart(ndx, 'Thriller', "#thriller", "Thriller");
     show_bar_chart(ndx, 'War', "#war", "War");
     show_bar_chart(ndx, 'Western', "#western", "Western");
-
-    dc.utils.printSingleValue.fformat = d3.format('.0f');
 
     dc.renderAll();
 }
@@ -60,35 +57,12 @@ function show_dropdown(ndx, dimensionLabel, id) {
 
 //---------------------------- Main Graphs ----------------------------------//
 
-function show_enjoyment(ndx, dimensionLabel, id, xlabel) {
-    var dim = ndx.dimension(dc.pluck(dimensionLabel));
-    var group = dim.group();
-    var filtered_group = remove_empty_bins(group)
-
-    dc.barChart(id)
-        .width(400)
-        .height(300)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
-        .dimension(dim)
-        .group(filtered_group)
-        .transitionDuration(500)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .elasticY(true)
-        .xAxisLabel(xlabel)
-        .yAxis().ticks(10);
-}
-
 function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
     var dim = ndx.dimension(dc.pluck(dimensionLabel)); //selects column from dataset
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
-    /*var w = 400; //adjust graph dimensions
-    var h = 300; */
 
-    dc.barChart(id)
-        /*.width(w)
-        .height(h) */
+    dc.barChart(id) //finds the id of the div the graph will attach to
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .dimension(dim)
         .group(filtered_group)
@@ -97,5 +71,5 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel(xlabel)
-        .yAxis().ticks(10);
+        .yAxis().ticks(5);
 }

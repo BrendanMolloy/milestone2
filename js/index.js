@@ -37,11 +37,11 @@ function remove_empty_bins(source_group) { //eliminates empty or null values fro
 //---------------------- Demographics Graphs ---------------------------------//
 
 function show_pie_chart(ndx, dimensionLabel, id){
-    var dim = ndx.dimension(dc.pluck(dimensionLabel));
+    var dim = ndx.dimension(dc.pluck(dimensionLabel)); //selects column from dataset
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
     
-    dc.pieChart(id)
+    dc.pieChart(id) //finds the id of the div the graph will attach to
         .useViewBoxResizing(true)
         .externalRadiusPadding(0)
         .innerRadius(0)
@@ -69,6 +69,6 @@ function show_age_range(ndx){
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Age")
-        .yAxis().ticks(10);
+        .yAxis().ticks(5);
 } 
 

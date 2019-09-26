@@ -45,11 +45,6 @@ function makeGraphs(error, ypData) {
     show_bar_chart(ndx, 'Shopping', "#shopping", "Shopping");
     show_bar_chart(ndx, 'Fun with friends', "#socializing", "Socializing");
     show_bar_chart(ndx, 'Passive sport', "#sport-casual", "Sport");
-    /*show_bar_chart(ndx, 'Active sport', "#sport-competitive", "Sport (competitive)"); Cannot render these last three graphs as crossfilter can only render a maximum of 32 graphs at once.
-    show_bar_chart(ndx, 'Adrenaline sports', "#sport-extreme", "Sport (extreme)"); 
-    show_bar_chart(ndx, 'Theatre', "#theatre", "Theatre"); */
-
-    dc.utils.printSingleValue.fformat = d3.format('.0f');
 
     dc.renderAll();
 }
@@ -86,9 +81,7 @@ function show_bar_chart(ndx, dimensionLabel, id, xlabel) {
     var group = dim.group();
     var filtered_group = remove_empty_bins(group)
 
-    dc.barChart(id)
-        /*.width(400)
-        .height(300) */
+    dc.barChart(id) //finds the id of the div the graph will attach to
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .dimension(dim)
         .group(filtered_group)
