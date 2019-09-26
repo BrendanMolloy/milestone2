@@ -24,7 +24,30 @@ As a researcher, I want to learn more about young people's fears, so that I can 
 As a health policy-maker, I want to learn more about young people's habits, to identify those most at risk of health issues.
 
 ### Wireframes
+![First Wireframe](/images/Wireframe 1.PNG)
+ My initial concept was to create an array of bar graphs that represented the 
+ distribution of scores for each associated category. The side bar was an idea I
+ had to add a bit more interactivity to the filters, while still keeping them 
+ separate from the rest of the graphs. They would rmain fixed to one side, so they
+ were visible at all times, allowing you to see which filters were presently active.
 
+![Second Wireframe](/images/Wireframe 2.PNG)
+I showed my first wireframe to a friend, and they raised concerns that the dashboard 
+looked a bit busy, and instead of squashing a 3x3 grid of graphs onto a page, I 
+could instead try a 2x2 grid to allow the data to breathe a little and prevent users 
+from becoming overwhelmed.
+
+![Third Wireframe](/images/Wireframe 3.PNG)
+The side nav worked great on a desktop resolution, but caused major scaling problem 
+on smaller devices. I had planned to commit one-thrid of the screen to the side nav,
+but this was still causing serious layout issues, and so far the sake of reactivity,
+I redesigned the layout to something closer to the final product, with the interactive 
+filters instead relegated to dropdowns near the top of the page.
+
+![Landing Wireframe](/images/Wireframe 2.PNG)
+Not wanting to completely bin the ideas from my sidenav, I recycled some of the 
+code to create an interesting home page, that allowed users to play around with 
+the data before looking at more specific categories.
 
 
 ---
