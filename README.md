@@ -1,4 +1,4 @@
-# Millennial Data Dashboard #
+# Young Person Data Dashboard #
 
 In 2013, students of the Statistics class at FSEV UK were asked to invite their friends to participate in this survey.
 The dataset accrued over 1000 participants and captured the fears, hobbies, and habits of a generation of young people.
